@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="x-ui"
+           fetch="https://github.com" />
+
+  <default revision="main"
+           remote="x-ui"
+           sync-j="4"
+           sync-c="true"
+           sync-f="true" />
+
+  <!-- Build Source -->
+  <project path="x-ui" name="x-ui" />
+  <project path="x-ui/build" name="build">
+    <linkfile src="build" dest="build" />
+  </project>
+  <project path="x-ui/web" name="web" />
+  <project path="x-ui/web/translation" name="translation" />
+
+  <!-- Compress -->
+  <!-- <project path="x-ui" name="release" /> -->
+</manifest>
