@@ -2,7 +2,10 @@
 <manifest>
 
   <remote  name="x-ui"
-           fetch="https://github.com" />
+           fetch="https://github.com/X-UI-Unofficial" />
+
+  <remote  name="x-ui-private"
+           fetch="ssh://git@github.com/X-UI-Unofficial" />
 
   <default revision="main"
            remote="x-ui"
@@ -12,12 +15,14 @@
 
   <!-- Build Source -->
   <project path="x-ui" name="x-ui" />
-  <project path="x-ui/build" name="build">
+  <project path="x-ui/build" name="build" remote="x-ui-private" revision="main" >
     <linkfile src="build" dest="build" />
   </project>
-  <project path="x-ui/web" name="web" />
+  <project path="x-ui/web" name="web" remote="x-ui-private" revision="main" />
   <project path="x-ui/web/translation" name="translation" />
 
   <!-- Compress -->
   <!-- <project path="x-ui" name="release" /> -->
+
+  <!-- TaffyChan ( aka Misaka Blog ) Please Stop Copy This Code And Remove CREDIT. Thks -->
 </manifest>
